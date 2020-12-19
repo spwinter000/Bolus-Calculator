@@ -49,8 +49,6 @@ function getBolus() {
     let carbs = parseInt(document.getElementById("carbs").value);
     let bloodsugar = parseInt(document.getElementById("bloodsugar").value);
 
-
-
     //set units
     carbs = (carbs / carbs_per_unit);
 
@@ -62,18 +60,18 @@ function getBolus() {
 
 
     //deploy correction if possible
-    if (bloodsugar < low_threshold)
+    if (bloodsugar < low_threshold) {
 
         bolus = carbs - low_adjust //+ 0.5;
 
-    else if (bloodsugar > high_threshold) 
+    } else if (bloodsugar > high_threshold) {
             
         bolus = carbs + high_adjust;
     
-    else 
+    } else { 
 
         bolus = carbs;
-
+    }
     document.getElementById('solution').innerHTML = "Bolus: " + bolus.toFixed(1) + " Units";
 
 }
