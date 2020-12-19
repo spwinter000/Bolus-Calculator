@@ -10,7 +10,7 @@ function validate(){
         document.getElementById('solution').innerHTML = "Please enter values above.";
     }
 
-    //validation for > 300 BG...to see bolus enter zero carbs...may need tooltip for that instruction.
+    //validation for > 300 BG...to see bolus enter zero carbs
     
     if(bloodsugar > 300 && carbs > 0){
         document.getElementById('solution').innerHTML = "Blood sugar over 300. Consider bolusing and waiting 15 minutes before eating.";
@@ -36,11 +36,6 @@ function validate(){
 
 
 }
-
-// document.getElementById("calculate").onclick = function() {
-//     validate();
-  
-//   };
 
 
 //getting bolus
